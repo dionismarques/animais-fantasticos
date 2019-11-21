@@ -1,0 +1,312 @@
+body, div, h1, h2, p, ul, li, dt, dl, dd {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: .1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #faf6ed;
+  color: #222;
+  -webkit-font-smooth: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+/**
+TABMENU, ACCORDION
+**/
+
+/* .js .js-accordion {
+  display: none; 
+}
+
+.js .js-accordion.ativo {
+  display: block;
+} */
+
+/* html {
+  height: 3000px;
+} */
+
+.js-menu.ativo {
+  grid-column: 3/5 !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin-top: 0;
+  
+}
+
+ul.ativo {
+  width: 60% !important;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+
+.js .js-scroll {
+  opacity: 0;
+  /* transform: translate3d(30px, 0, 0); */
+  transform: translate3d(0, 30px, 0);
+  transition: .3s;
+}
+
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.js .js-accordion dt::after {
+  content: '⮧';  
+  margin-left: 10px;
+  color: #222;
+  cursor: pointer;
+}
+
+.js .js-accordion dt.ativo::after {
+  content: '⮥';
+}
+
+.js .js-accordion dd {
+  display: none; 
+}
+
+.js .js-accordion dd.ativo {
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    opacity: 1;
+    max-height: 120px;
+  }
+}
+
+.js .js-tabcontent section {
+  display: none;
+}
+
+.js .js-tabcontent section.ativo {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0)
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+/**
+END
+**/
+
+.menu {
+  grid-column: 3/5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: #222;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.grid-section {
+  grid-column: 2/4;
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 100px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.titulo {
+  font-family: 'Playfair Display SC', Georgia;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  grid-column: 1/4;
+}
+
+.animais h2 {
+  font-family: 'IBM Plex mono', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+  color: #e54;
+}
+
+.animais h2::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  background: #fb5;
+  width: 40px;
+  height: 10px;
+}
+
+.animais-imagem {
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.animais-imagem li {
+  cursor: pointer;
+}
+
+.animais-imagem::-webkit-scrollbar {
+  width: 18px;
+}
+
+.animais-imagem::-webkit-scrollbar-thumb {
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.animais-imagem::-webkit-scrollbar-track {
+  background: #faf6ed;
+}
+
+.animais p {
+  font-family: Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 1rem; 
+}
+
+.animais-descricao {
+  grid-column: 3;
+}
+.animais-descricao section {
+  margin-bottom: 3rem;
+}
+
+.faq-descricao {
+  grid-column: 2/4;
+}
+
+.faq-descricao dt {
+  font-family: 'IBM Plex mono', monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #e54;
+}
+
+.faq-descricao dt::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  background: #fb5;
+  width: 20px;
+  height: 10px;
+}
+
+.faq-descricao dd {
+  font-family:  Helvetica, Arial;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+}
+
+.mapa {
+  grid-column: 2;
+}
+
+.dados {
+  grid-column: 3;
+}
+
+.dados li {
+  margin-bottom: 1rem;
+  font-family:  Helvetica, Arial;
+}
+
+.dados li::before {
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  background: #fb5;
+  width: 20px;
+  height: 10px;
+}
+
+.copy {
+  grid-column: 3/5;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.copy p {
+  padding: 20px;
+  font-family: 'IBM Plex mono', monospace;
+  font-weight: bold;
+}
+
+@media (max-width: 700px){
+  body {
+    grid-template-columns: 1fr;
+  }
+  .menu, .grid-section, .copy {
+    grid-column: 1;
+  }
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+  .animais-imagem {
+    grid-column: 1;
+    height: 110px;
+  }
+  .faq-descricao, .dados, .mapa {
+    grid-column: 1/3;
+  }
+  .grid-section h1 {
+    font-size: 3rem;
+  }
+  .menu {
+    margin-top: 0;
+  }
+  .copy {
+    margin-bottom: 0;
+  }
+}
