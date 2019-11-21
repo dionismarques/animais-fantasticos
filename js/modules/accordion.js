@@ -1,17 +1,26 @@
-export default function initAccordion() {
-  const accordion = document.querySelectorAll('[data-anima="accordion"] dt');
-  const activeClass = 'ativo';
+// import initAnimaNumeros from "./anima-numeros";
 
-  function addActive() {
-    this.classList.toggle(activeClass);
-    this.nextElementSibling.classList.toggle(activeClass);
+export default class Accordion {
+  constructor(list) {
+    this.accordion = document.querySelectorAll(list);
+    this.activeClass = 'ativo';
   }
-  if (accordion.length) {
-    accordion[0].classList.toggle(activeClass);
-    accordion[0].nextElementSibling.classList.toggle(activeClass);
 
-    accordion.forEach((item) => {
-      item.addEventListener('click', addActive);
+  toggleAccordion(item) {
+    item.classList.toggle(this.activeClass);
+    item.nextElementSibling.classList.toggle(this.activeClass);
+  }
+
+  addAccordionEvent() {
+    this.accordion.forEach((item) => {
+      item.addEventListener('click', () => this.toggleAccordion(item));
     });
+  }
+
+  init() {
+    if (this.accordion.length) {
+      this.toggleAccordion(this.accordion[0]);
+      this.addAccordionEvent();
+    }
   }
 }
