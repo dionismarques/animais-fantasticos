@@ -1,5 +1,4 @@
 import ScrollSmooth from './modules/scroll.js';
-import initAnimationScroll from './modules/animascroll.js';
 import initTabNav from './modules/tabnav.js';
 import initAccordion from './modules/accordion.js';
 import initModal from './modules/modal-1.js';
@@ -9,12 +8,12 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import initAnimaisFetch from './modules/fetch-animais.js';
 import initBitcoinFetch from './modules/fetch-bitcoin.js';
+import initAnimationScroll from './modules/animascroll.js';
 
 // console.log(tooltip);
 const scrollsmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]');
 scrollsmooth.init();
 
-initAnimationScroll();
 initTabNav();
 initAccordion();
 initModal();
@@ -24,6 +23,7 @@ initMenuMobile();
 initFuncionamento();
 initAnimaisFetch();
 initBitcoinFetch();
+initAnimationScroll();
 
 // import $ from 'jquery';
 // import _ from 'lodash';
