@@ -2,13 +2,13 @@ import ScrollSmooth from './modules/scroll.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
+import Accordion from './modules/accordion.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import initAnimaisFetch from './modules/fetch-animais.js';
 import initBitcoinFetch from './modules/fetch-bitcoin.js';
 import initAnimationScroll from './modules/animascroll.js';
-import Accordion from './modules/accordion.js';
 
 // console.log(tooltip);
 const scrollsmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]');
