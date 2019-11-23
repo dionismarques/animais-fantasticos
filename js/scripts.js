@@ -32,4 +32,4 @@ initFuncionamento();
 initBitcoinFetch();
 initAnimationScroll();
 
-fetchAnimais('././animais-api.json', '.numeros-grid');
+fetchAnimais('../../animais-api.json', '.numeros-grid');
