@@ -33,3 +33,5 @@ initBitcoinFetch();
 initAnimationScroll();
 
 fetchAnimais('../../animais-api.json', '.numeros-grid');
+
+fetchBitcoin('https://blockchain.info/ticker','.preco-btc');
