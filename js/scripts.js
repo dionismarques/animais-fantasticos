@@ -33,6 +33,6 @@ initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
 
-fetchAnimais('../../animais-api.json', '.numeros-grid');
+fetchAnimais('././animais-api.json', '.numeros-grid');
 
 fetchBitcoin('https://blockchain.info/ticker', '.preco-btc');

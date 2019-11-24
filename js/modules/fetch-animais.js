@@ -41,4 +41,8 @@ export default function fetchAnimais(url, target) {
   }
 
   return criarAnimais();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b983f1828fe2a4448dbcc00ed75bf00cce9585e3
