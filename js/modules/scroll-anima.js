@@ -45,3 +45,5 @@ export default class ScrollAnima {
     window.removeEventListener('scroll', this.checkDistance);
   }
 }
+
+
