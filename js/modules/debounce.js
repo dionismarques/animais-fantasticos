@@ -1,4 +1,5 @@
-export default function outSideClick(callback, delay) {
+
+export default function debounce(callback, delay) {
   let timer;
   return (...args) => {
     if (timer) clearTimeout(timer);
