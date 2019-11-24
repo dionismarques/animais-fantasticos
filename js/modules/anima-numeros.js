@@ -27,7 +27,6 @@ export default class AnimaNumeros {
   // Ativa incrementar numero para cada
   // numero selecionado do DOM
   animaNumeros() {
-    console.log('oi');
     this.numeros.forEach((numero) => this.constructor.incrementarNumero(numero));
   }
 
